@@ -41,7 +41,7 @@ body {
  .tweeter-reel {
    width: 90%;
    display: flex;
-   flex-direction: column;
+   flex-direction: column-reverse;
   }
 
   article {
