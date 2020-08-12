@@ -24,7 +24,7 @@ const tweetData = [
   }
 ]
 
-
+//Takes the given info, passes through createTweetElement function to create the proper formatting for HTML, then actually modifies the existing HTML
 const renderTweets = function(tweets) {
   for (let tweet of tweets){
     $('.tweeter-reel').append(createTweetElement(tweet))
@@ -32,7 +32,7 @@ const renderTweets = function(tweets) {
 }
 
 
-
+//Creates the formatting for a given tweet/user in order to modify the existing HTML
 const createTweetElement = function(object) {
   let $tweet = `
     <article>
@@ -51,12 +51,21 @@ const createTweetElement = function(object) {
 }
 
 
-
+//JQUERY 
 $(document).ready(function() {
-  renderTweets(tweetData);
+  renderTweets(tweetData)
+
+  $('form').submit(function( event ) {
+    event.preventDefault();
+
+    $.post( "http://localhost:8081/tweets/", $('form').serialize(), function () {
+      renderTweets(tweetData)
+      console.log( $('form').serialize())
+    });
+  
+  });
+
 });
 
 
 
-
-// $('#tweet-text')
