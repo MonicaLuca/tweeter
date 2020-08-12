@@ -1,4 +1,4 @@
-header {
+body > header {
   height: 400px; 
   display: flex;
   justify-content: center;
@@ -7,5 +7,4 @@ header {
   background-color: orange;
   background-image: url("https://www.transparenttextures.com/patterns/always-grey.png");
  }
- 
  
