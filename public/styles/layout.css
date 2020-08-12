@@ -85,6 +85,8 @@ body {
     font-weight: normal;
     padding-top: 0;
     color: black;
+    display: flex;
+    align-items: center;
   }
 
   article > h1 {
