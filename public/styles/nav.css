@@ -10,7 +10,9 @@ nav {
   justify-content: space-between;
   align-items: flex-end;
   padding: 1.5em;
-}
-
+  position: fixed;
+  width:100%;
+  top: 0;
+} 
 
 
