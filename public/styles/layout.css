@@ -19,6 +19,7 @@ body {
   background-color: #f4f1ec;
   font-size: 24px;
   font-family: 'Source Sans Pro', sans-serif;
+  padding-top:120px;
 }
 
 /*
@@ -35,3 +36,72 @@ body {
   flex-direction: column;
   background-color: #f4f1ec;
  }
+
+
+ .tweeter-reel {
+   width: 90%;
+   display: flex;
+   flex-direction: column;
+  }
+
+  article {
+    width: 100%;
+    border: 3px solid black ;
+    margin-bottom: 50px;
+    padding: 10px;
+    color:#f4f1ec;
+  }
+
+
+  article > header {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+
+  footer {
+    border-top: 3px solid black;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .date {
+    font-size: small;
+    font-weight: bold;
+    color: black;
+  }
+
+  .handle {
+
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: normal;
+    font-size: larger;
+  }
+
+  .profile {
+    font-family:'Source Sans Pro', sans-serif;
+    font-size: 30px;
+    font-weight: normal;
+    padding-top: 0;
+    color: black;
+  }
+
+  article > h1 {
+    display: flex;
+    align-items: center;
+    color: black;
+  }
+
+  .material-icons{
+    color: #0522b3;
+  }
+
+  article > p{
+    color: black;
+  }
+
+  article:hover{
+    color: #abcced;
+    box-shadow: 5px 10px #abcced;
+  }
