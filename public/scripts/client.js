@@ -1,11 +1,11 @@
 
-//Takes the given info, passes through createTweetElement function to create the proper formatting for HTML, then actually modifies the existing HTML
-
 const escape =  function(str) {
   let div = document.createElement('div');
   div.appendChild(document.createTextNode(str));
   return div.innerHTML;
 }
+
+//Takes the given info, passes through createTweetElement function to create the proper formatting for HTML, then actually modifies the existing HTML
 
 const renderTweets = function(tweets) {
   $('.tweeter-reel').empty()
@@ -25,16 +25,15 @@ const createTweetElement = function(object) {
        </header>
       <p> ${escape(object.content.text)}</p>
       <footer>
-        <p class='date'> ${escape(object.created_at)}days ago </p>
-        <i class="material-icons">&#xe3a0; &#xe86a; favorite</i>
+       <p class='date'> ${escape(moment(object.created_at).fromNow())} </p> 
+        <i class="material-icons">&#xe3a0; repeat favorite</i>
       </footer>
     </article>
   `
   return $tweet;
 }
 
-
-//JQUERY 
+//JQUERY - loads tweets from server and queues appropriate error messages when needed.
 $(document).ready(function() {
  
   const loadtweets = function () {
