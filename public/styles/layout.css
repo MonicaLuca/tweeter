@@ -3,9 +3,11 @@
  * https://css-tricks.com/international-box-sizing-awareness-day/
  * Do not modify these two selectors, please
  */
-html {
+
+ html {
   box-sizing: border-box;
 }
+
 *, *:before, *:after {
   box-sizing: inherit;
 }
@@ -26,9 +28,10 @@ body {
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
 
-
+/* Styling to position the container which holds everything below the header */
  main.container {
   margin: auto;
+  margin-top: 44px;
   width: 90%;
   display: flex;
   justify-content: center; 
@@ -37,13 +40,14 @@ body {
   background-color: #f4f1ec;
  }
 
-
+/* Aligns and positions the already submitted tweets */
  .tweeter-reel {
    width: 90%;
    display: flex;
    flex-direction: column-reverse;
   }
 
+  /* Styles the appearance of a submitted tweet */
   article {
     width: 100%;
     border: 3px solid black ;
@@ -52,33 +56,35 @@ body {
     color:#f4f1ec;
   }
 
-
+  /* Positions the header of a tweet (includes the alignment of the user handle and user's name) */
   article > header {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
   }
 
-
+  /* Postions the timestamp and icons, and stlyes a top-border to separate them from the tweet */
   footer {
     border-top: 3px solid black;
     display: flex;
     justify-content: space-between;
   }
 
+  /* Styling for the timestamp at the bottom of a submitted tweet */
   .date {
     font-size: small;
     font-weight: bold;
     color: black;
   }
 
+  /* Styling for the twitter handle */
   .handle {
-
     font-family: 'Source Sans Pro', sans-serif;
     font-weight: normal;
     font-size: larger;
   }
 
+  /* Styles the user's name */
   .profile {
     font-family:'Source Sans Pro', sans-serif;
     font-size: 30px;
@@ -89,30 +95,74 @@ body {
     align-items: center;
   }
 
+
   article > h1 {
     display: flex;
     align-items: center;
     color: black;
   }
 
+  /* Turns the flag, retweet, and favorite icons blue */
   .material-icons{
     color: #0522b3;
   }
 
+  /* Ensures the text in the tweet remains in the border */
   article > p{
     color: black;
+    word-break: break-word
   }
 
+  /* Turns the twitter handle and box shadow blue when cursor is over the tweet */
   article:hover{
     color: #abcced;
     box-shadow: 5px 10px #abcced;
   }
 
+  /* Styling for the error messages   */
   .error-message{
     display:none;
     color: red;
     border: 4px red solid;
-    margin-top: 25px;
+    margin-top: 0px;
     text-align: center;
     padding: 10px;
   }
+
+  /* Responsive Design media query if screen is larger than 1023px */
+  @media (min-width: 1023px) {
+
+    /* changes the nav background blue and removes background image */
+    body > nav {
+      background-color: #4056A1; 
+      background-image: none;
+    }
+
+    /* repositions the layout so that the header is beside the twitter-reel */
+    body{
+      width:100%;
+      display: flex;
+      flex-direction: row;
+      margin-top: 20px;
+      margin-right: 30px;
+    }
+
+    /* Positions the header margin */
+    body > header{
+      width: 50%;
+      margin-left: 10px;
+      margin: 45px;
+    }
+
+    main {
+      width:100%;
+      margin: 50px;
+    }
+
+    /* Posiions the user's name and twitter handle */
+    article > header {
+      display: flex;
+      justify-content: space-between;
+    }
+
+ }  
