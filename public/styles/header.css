@@ -1,3 +1,4 @@
+/* Syling and positioning for the header */
 body > header {
   height: 400px; 
   display: flex;
@@ -7,4 +8,10 @@ body > header {
   background-color: orange;
   background-image: url("https://www.transparenttextures.com/patterns/always-grey.png");
  }
- 
+
+ /* header user's name styling */
+.user {
+  font-weight: normal;
+  color: white;
+  font-family: 'Source Sans Pro', sans-serif;
+}
