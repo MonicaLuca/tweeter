@@ -1,12 +1,14 @@
+/* Styling for font class */
 .bungee {
   font-family: 'Bungee', sans-serif;
   font-size: 40px;
   
 }
 
-
+/* Styling amd postioning for the navigation bar */
 nav {
-  background-color: #4056A1;
+  background-color: orange; 
+  background-image: url("https://www.transparenttextures.com/patterns/always-grey.png"); 
   color: #FFFF; 
   display: flex;
   justify-content: space-between;
@@ -19,13 +21,16 @@ nav {
   padding-bottom: 20px;
 } 
 
+/* Alignment for the icon and text */
 nav > div {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
+/* Styling for arrow Icon */
 div > .material-icons {
   color: red;
   transform: rotate(90deg);
 }
+
