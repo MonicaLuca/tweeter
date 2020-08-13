@@ -107,3 +107,12 @@ body {
     color: #abcced;
     box-shadow: 5px 10px #abcced;
   }
+
+  .error-message{
+    display:none;
+    color: red;
+    border: 4px red solid;
+    margin-top: 25px;
+    text-align: center;
+    padding: 10px;
+  }
