@@ -11,7 +11,7 @@ This repository is the starter code for the project: Students will fork and clon
 
 ## Screenshots
 
-!["Screenshot of Tweeter Desktop Display"]("https://github.com/MonicaLuca/tweeter/blob/master/docs/Tweeter-desktop.png?raw=true")
+!["Screenshot of Tweeter Desktop Display"]("https://github.com/MonicaLuca/tweeter/blob/master/docs/Tweeter-desktop.png")
 
 !["Screenshot of Tweeter Mobile Display"]("https://github.com/MonicaLuca/tweeter/blob/master/docs/Tweeter-mobile.png?raw=true")
 
