@@ -1,4 +1,4 @@
-
+/* CSS styling for the textarea where user can write a tweet */
 .new-tweet{
   width: 90%;
   display: flex;
@@ -22,6 +22,8 @@ form {
   flex-direction: column;
 }
 
+
+/* CSS styling for the submit button */
 button {
   background-color: #4056A1;
   color: #FFFF; 
@@ -29,6 +31,7 @@ button {
   
 }
 
+/* Styling to ensure the submit button and counter are aligned and the same font*/
 .align{
   display: flex;
   flex-wrap: wrap;
@@ -38,6 +41,7 @@ button {
   margin-bottom: 70px
 }
 
+/*color change when character count is less than 0*/
 .negative {
   color:red
 }
