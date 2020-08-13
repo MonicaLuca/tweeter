@@ -1,4 +1,4 @@
-
+// function to prevent Cross-Site-Scrpting
 const escape =  function(str) {
   let div = document.createElement('div');
   div.appendChild(document.createTextNode(str));
@@ -33,7 +33,7 @@ const createTweetElement = function(object) {
   return $tweet;
 }
 
-//JQUERY - loads tweets from server and queues appropriate error messages when needed.
+//JQUERY - loads tweets from server and queues appropriate error messages when needed
 $(document).ready(function() {
  
   const loadtweets = function () {
@@ -50,13 +50,10 @@ $(document).ready(function() {
     } else if ($('#tweet-text').val().length > 140){ 
       return $('.error-message').text('ERROR: Too many characters!').slideDown();
     } else{
-      $.post( "/tweets", $('form').serialize(), function () {
+      $.post( "/tweets", $('form').serialize(), function() {
         loadtweets();
       });
     }
   });
   
 });
-
-
-
